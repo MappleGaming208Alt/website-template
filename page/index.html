@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Google Classroom</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        // Function to continuously redirect to index.html
+        function keepRedirecting() {
+            window.open('index.html', '_blank'); // Open index.html in a new tab or window
+            setTimeout(function() {
+                window.location.href = window.location.href; // Reload the current page to repeat the process
+            }, 1); // Repeat the process every 1 second
+        }
+
+        // Start the redirection when the page loads
+        window.onload = keepRedirecting;
+    </script>
+
+    <!-- Add the favicon -->
+    <link rel="icon" href="imgclass.png" type="image/png"> <!-- Link to your imgclass.png file -->
+</head>
+<body>
+    <p>Google Classroom</p>
+</body>
+</html>
