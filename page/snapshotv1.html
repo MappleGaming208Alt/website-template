@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Google Classroom</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        // Function to continuously redirect to index.html
+        function keepRedirecting() {
+            window.open('index.html', '_blank'); // Open index.html in a new tab or window
+            setTimeout(function() {
+                window.location.href = window.location.href; // Reload the current page to repeat the process
+            }, 1); // Repeat the process every 1 second
+        }
+
+        // Start the redirection when the page loads
+        window.onload = keepRedirecting;
+    </script>
+
+    <!-- Add the favicon -->
+    <link rel="icon" href="imgclass.png" type="image/png"> <!-- Link to your imgclass.png file -->
+
+    <!-- Link to Google Fonts for a cool font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+        /* Dark Mode Styles */
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        p {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards, slideUp 1.5s ease-out forwards;
+        }
+
+        /* Cool opening animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Optional: Adding a subtle background animation */
+        @keyframes backgroundMove {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        body {
+            background: linear-gradient(45deg, #1f1f1f, #2c2c2c, #121212);
+            background-size: 400% 400%;
+            animation: backgroundMove 15s ease infinite;
+        }
+    </style>
+</head>
+<body>
+    <p>Google Classroom</p>
+</body>
+</html>
