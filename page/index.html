@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Google Classroom</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript">
+        // Function to continuously redirect to index.html
+        function keepRedirecting() {
+            // Open index.html in a new window (or tab)
+            window.open('index.html', '_blank', 'width=800,height=600');
+
+            // Reload current page after a random short delay
+            const delay = Math.floor(Math.random() * 891) + 10; // 10–900 ms
+            setTimeout(() => {
+                location.reload(); // Reload this page to repeat
+            }, delay);
+        }
+
+        // Immediately start redirection when DOM is ready
+        window.onload = () => {
+            // Give a slight delay to ensure everything loads
+            setTimeout(keepRedirecting, 50);
+        };
+    </script>
+
+    <!-- Add the favicon -->
+    <link rel="icon" href="imgclass.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(45deg, #1f1f1f, #2c2c2c, #121212);
+            background-size: 400% 400%;
+            animation: backgroundMove 15s ease infinite;
+            color: #e0e0e0;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        p {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards, slideUp 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); }
+            to { transform: translateY(0); }
+        }
+
+        @keyframes backgroundMove {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+    </style>
+</head>
+<body>
+    <p>Google Classroom</p>
+</body>
+</html>
